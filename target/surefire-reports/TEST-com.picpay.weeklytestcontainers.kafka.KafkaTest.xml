@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.picpay.weeklytestcontainers.kafka.KafkaTest" time="14.722" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/target/test-classes:/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/target/classes:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-data-jdbc/3.1.4/spring-boot-starter-data-jdbc-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.4/spring-boot-starter-jdbc-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-jdbc/6.0.12/spring-jdbc-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-jdbc/3.1.4/spring-data-jdbc-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-relational/3.1.4/spring-data-relational-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-commons/3.1.4/spring-data-commons-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-beans/6.0.12/spring-beans-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/kafka/spring-kafka/3.0.11/spring-kafka-3.0.11.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-context/6.0.12/spring-context-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-aop/6.0.12/spring-aop-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-expression/6.0.12/spring-expression-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-messaging/6.0.12/spring-messaging-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-tx/6.0.12/spring-tx-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/retry/spring-retry/2.0.3/spring-retry-2.0.3.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/com/github/luben/zstd-jni/1.5.2-1/zstd-jni-1.5.2-1.jar:/Users/paulo.bezerra/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/Users/paulo.bezerra/.m2/repository/org/xerial/snappy/snappy-java/1.1.8.4/snappy-java-1.1.8.4.jar:/Users/paulo.bezerra/.m2/repository/io/micrometer/micrometer-observation/1.11.4/micrometer-observation-1.11.4.jar:/Users/paulo.bezerra/.m2/repository/io/micrometer/micrometer-commons/1.11.4/micrometer-commons-1.11.4.jar:/Users/paulo.bezerra/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/paulo.bezerra/.m2/repository/org/flywaydb/flyway-core/9.16.3/flyway-core-9.16.3.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.2/jackson-dataformat-toml-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/paulo.bezerra/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/3.1.4/spring-boot-starter-data-redis-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.4/spring-boot-starter-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot/3.1.4/spring-boot-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.4/spring-boot-starter-logging-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/paulo.bezerra/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/paulo.bezerra/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/paulo.bezerra/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/paulo.bezerra/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/paulo.bezerra/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/paulo.bezerra/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-redis/3.1.4/spring-data-redis-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-keyvalue/3.1.4/spring-data-keyvalue-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-oxm/6.0.12/spring-oxm-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-context-support/6.0.12/spring-context-support-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/io/lettuce/lettuce-core/6.2.6.RELEASE/lettuce-core-6.2.6.RELEASE.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-common/4.1.97.Final/netty-common-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-handler/4.1.97.Final/netty-handler-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-resolver/4.1.97.Final/netty-resolver-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-buffer/4.1.97.Final/netty-buffer-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.97.Final/netty-transport-native-unix-common-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-codec/4.1.97.Final/netty-codec-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-transport/4.1.97.Final/netty-transport-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/projectreactor/reactor-core/3.5.10/reactor-core-3.5.10.jar:/Users/paulo.bezerra/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/paulo.bezerra/.m2/repository/redis/clients/jedis/4.3.2/jedis-4.3.2.jar:/Users/paulo.bezerra/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/paulo.bezerra/.m2/repository/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar:/Users/paulo.bezerra/.m2/repository/org/json/json/20220320/json-20220320.jar:/Users/paulo.bezerra/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/paulo.bezerra/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar:/Users/paulo.bezerra/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/Users/paulo.bezerra/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/paulo.bezerra/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.4/spring-boot-starter-test-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-test/3.1.4/spring-boot-test-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.4/spring-boot-test-autoconfigure-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/paulo.bezerra/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/paulo.bezerra/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/paulo.bezerra/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/paulo.bezerra/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/paulo.bezerra/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/paulo.bezerra/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/paulo.bezerra/.m2/repository/net/bytebuddy/byte-buddy/1.14.8/byte-buddy-1.14.8.jar:/Users/paulo.bezerra/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/paulo.bezerra/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/paulo.bezerra/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.8/byte-buddy-agent-1.14.8.jar:/Users/paulo.bezerra/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/paulo.bezerra/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/paulo.bezerra/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/paulo.bezerra/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-core/6.0.12/spring-core-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-jcl/6.0.12/spring-jcl-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-test/6.0.12/spring-test-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-testcontainers/3.1.4/spring-boot-testcontainers-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.4/spring-boot-autoconfigure-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/testcontainers/1.18.3/testcontainers-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/paulo.bezerra/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/paulo.bezerra/.m2/repository/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar:/Users/paulo.bezerra/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/paulo.bezerra/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/paulo.bezerra/.m2/repository/com/github/docker-java/docker-java-api/3.3.0/docker-java-api-3.3.0.jar:/Users/paulo.bezerra/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.0/docker-java-transport-zerodep-3.3.0.jar:/Users/paulo.bezerra/.m2/repository/com/github/docker-java/docker-java-transport/3.3.0/docker-java-transport-3.3.0.jar:/Users/paulo.bezerra/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/kafka/spring-kafka-test/3.0.11/spring-kafka-test-3.0.11.jar:/Users/paulo.bezerra/.m2/repository/org/apache/zookeeper/zookeeper/3.6.3/zookeeper-3.6.3.jar:/Users/paulo.bezerra/.m2/repository/org/apache/zookeeper/zookeeper-jute/3.6.3/zookeeper-jute-3.6.3.jar:/Users/paulo.bezerra/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-transport-native-epoll/4.1.97.Final/netty-transport-native-epoll-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.97.Final/netty-transport-classes-epoll-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1-test.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-metadata/3.4.1/kafka-metadata-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-server-common/3.4.1/kafka-server-common-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-raft/3.4.1/kafka-raft-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.2/jackson-datatype-jdk8-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-streams-test-utils/3.4.1/kafka-streams-test-utils-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-streams/3.4.1/kafka-streams-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/rocksdb/rocksdbjni/7.1.2/rocksdbjni-7.1.2.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka_2.13/3.4.1/kafka_2.13-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-group-coordinator/3.4.1/kafka-group-coordinator-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-storage/3.4.1/kafka-storage-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-storage-api/3.4.1/kafka-storage-api-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.15.2/jackson-module-scala_2.13-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.15.2/jackson-dataformat-csv-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/paulo.bezerra/.m2/repository/org/bitbucket/b_c/jose4j/0.9.3/jose4j-0.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/scala-lang/modules/scala-collection-compat_2.13/2.10.0/scala-collection-compat_2.13-2.10.0.jar:/Users/paulo.bezerra/.m2/repository/org/scala-lang/modules/scala-java8-compat_2.13/1.0.2/scala-java8-compat_2.13-1.0.2.jar:/Users/paulo.bezerra/.m2/repository/org/scala-lang/scala-reflect/2.13.10/scala-reflect-2.13.10.jar:/Users/paulo.bezerra/.m2/repository/com/typesafe/scala-logging/scala-logging_2.13/3.9.4/scala-logging_2.13-3.9.4.jar:/Users/paulo.bezerra/.m2/repository/io/dropwizard/metrics/metrics-core/4.2.19/metrics-core-4.2.19.jar:/Users/paulo.bezerra/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka_2.13/3.4.1/kafka_2.13-3.4.1-test.jar:/Users/paulo.bezerra/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/paulo.bezerra/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/paulo.bezerra/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.3/junit-platform-launcher-1.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/junit-jupiter/1.18.3/junit-jupiter-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/kafka/1.18.3/kafka-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/postgresql/1.18.3/postgresql-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/jdbc/1.18.3/jdbc-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/database-commons/1.18.3/database-commons-1.18.3.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="/Users/paulo.bezerra/.asdf/installs/java/openjdk-17.0.2/lib"/>
+    <property name="sun.java.command" value="/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/target/surefire/surefirebooter-20231031111923541_3.jar /Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/target/surefire 2023-10-31T11-19-23_451-jvmRun1 surefire-20231031111923541_1tmp surefire_0-20231031111923541_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/target/test-classes:/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/target/classes:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-data-jdbc/3.1.4/spring-boot-starter-data-jdbc-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.4/spring-boot-starter-jdbc-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-jdbc/6.0.12/spring-jdbc-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-jdbc/3.1.4/spring-data-jdbc-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-relational/3.1.4/spring-data-relational-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-commons/3.1.4/spring-data-commons-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-beans/6.0.12/spring-beans-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/kafka/spring-kafka/3.0.11/spring-kafka-3.0.11.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-context/6.0.12/spring-context-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-aop/6.0.12/spring-aop-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-expression/6.0.12/spring-expression-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-messaging/6.0.12/spring-messaging-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-tx/6.0.12/spring-tx-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/retry/spring-retry/2.0.3/spring-retry-2.0.3.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/com/github/luben/zstd-jni/1.5.2-1/zstd-jni-1.5.2-1.jar:/Users/paulo.bezerra/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/Users/paulo.bezerra/.m2/repository/org/xerial/snappy/snappy-java/1.1.8.4/snappy-java-1.1.8.4.jar:/Users/paulo.bezerra/.m2/repository/io/micrometer/micrometer-observation/1.11.4/micrometer-observation-1.11.4.jar:/Users/paulo.bezerra/.m2/repository/io/micrometer/micrometer-commons/1.11.4/micrometer-commons-1.11.4.jar:/Users/paulo.bezerra/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/paulo.bezerra/.m2/repository/org/flywaydb/flyway-core/9.16.3/flyway-core-9.16.3.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.2/jackson-dataformat-toml-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/paulo.bezerra/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/3.1.4/spring-boot-starter-data-redis-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.4/spring-boot-starter-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot/3.1.4/spring-boot-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.4/spring-boot-starter-logging-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/paulo.bezerra/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/Users/paulo.bezerra/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/paulo.bezerra/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/paulo.bezerra/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/paulo.bezerra/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/paulo.bezerra/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-redis/3.1.4/spring-data-redis-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/data/spring-data-keyvalue/3.1.4/spring-data-keyvalue-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-oxm/6.0.12/spring-oxm-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-context-support/6.0.12/spring-context-support-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/io/lettuce/lettuce-core/6.2.6.RELEASE/lettuce-core-6.2.6.RELEASE.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-common/4.1.97.Final/netty-common-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-handler/4.1.97.Final/netty-handler-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-resolver/4.1.97.Final/netty-resolver-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-buffer/4.1.97.Final/netty-buffer-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.97.Final/netty-transport-native-unix-common-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-codec/4.1.97.Final/netty-codec-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-transport/4.1.97.Final/netty-transport-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/projectreactor/reactor-core/3.5.10/reactor-core-3.5.10.jar:/Users/paulo.bezerra/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/paulo.bezerra/.m2/repository/redis/clients/jedis/4.3.2/jedis-4.3.2.jar:/Users/paulo.bezerra/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/paulo.bezerra/.m2/repository/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar:/Users/paulo.bezerra/.m2/repository/org/json/json/20220320/json-20220320.jar:/Users/paulo.bezerra/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/paulo.bezerra/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar:/Users/paulo.bezerra/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/Users/paulo.bezerra/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/paulo.bezerra/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.4/spring-boot-starter-test-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-test/3.1.4/spring-boot-test-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.4/spring-boot-test-autoconfigure-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/paulo.bezerra/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/paulo.bezerra/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/paulo.bezerra/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/paulo.bezerra/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/paulo.bezerra/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/paulo.bezerra/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/paulo.bezerra/.m2/repository/net/bytebuddy/byte-buddy/1.14.8/byte-buddy-1.14.8.jar:/Users/paulo.bezerra/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/paulo.bezerra/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/paulo.bezerra/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.8/byte-buddy-agent-1.14.8.jar:/Users/paulo.bezerra/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/paulo.bezerra/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/paulo.bezerra/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/paulo.bezerra/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-core/6.0.12/spring-core-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-jcl/6.0.12/spring-jcl-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/spring-test/6.0.12/spring-test-6.0.12.jar:/Users/paulo.bezerra/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-testcontainers/3.1.4/spring-boot-testcontainers-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.4/spring-boot-autoconfigure-3.1.4.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/testcontainers/1.18.3/testcontainers-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/paulo.bezerra/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/paulo.bezerra/.m2/repository/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar:/Users/paulo.bezerra/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/paulo.bezerra/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/paulo.bezerra/.m2/repository/com/github/docker-java/docker-java-api/3.3.0/docker-java-api-3.3.0.jar:/Users/paulo.bezerra/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.0/docker-java-transport-zerodep-3.3.0.jar:/Users/paulo.bezerra/.m2/repository/com/github/docker-java/docker-java-transport/3.3.0/docker-java-transport-3.3.0.jar:/Users/paulo.bezerra/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/Users/paulo.bezerra/.m2/repository/org/springframework/kafka/spring-kafka-test/3.0.11/spring-kafka-test-3.0.11.jar:/Users/paulo.bezerra/.m2/repository/org/apache/zookeeper/zookeeper/3.6.3/zookeeper-3.6.3.jar:/Users/paulo.bezerra/.m2/repository/org/apache/zookeeper/zookeeper-jute/3.6.3/zookeeper-jute-3.6.3.jar:/Users/paulo.bezerra/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-transport-native-epoll/4.1.97.Final/netty-transport-native-epoll-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.97.Final/netty-transport-classes-epoll-4.1.97.Final.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1-test.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-metadata/3.4.1/kafka-metadata-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-server-common/3.4.1/kafka-server-common-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-raft/3.4.1/kafka-raft-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.2/jackson-datatype-jdk8-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-streams-test-utils/3.4.1/kafka-streams-test-utils-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-streams/3.4.1/kafka-streams-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/rocksdb/rocksdbjni/7.1.2/rocksdbjni-7.1.2.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka_2.13/3.4.1/kafka_2.13-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-group-coordinator/3.4.1/kafka-group-coordinator-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-storage/3.4.1/kafka-storage-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka-storage-api/3.4.1/kafka-storage-api-3.4.1.jar:/Users/paulo.bezerra/.m2/repository/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.15.2/jackson-module-scala_2.13-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/Users/paulo.bezerra/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.15.2/jackson-dataformat-csv-2.15.2.jar:/Users/paulo.bezerra/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/paulo.bezerra/.m2/repository/org/bitbucket/b_c/jose4j/0.9.3/jose4j-0.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/scala-lang/modules/scala-collection-compat_2.13/2.10.0/scala-collection-compat_2.13-2.10.0.jar:/Users/paulo.bezerra/.m2/repository/org/scala-lang/modules/scala-java8-compat_2.13/1.0.2/scala-java8-compat_2.13-1.0.2.jar:/Users/paulo.bezerra/.m2/repository/org/scala-lang/scala-reflect/2.13.10/scala-reflect-2.13.10.jar:/Users/paulo.bezerra/.m2/repository/com/typesafe/scala-logging/scala-logging_2.13/3.9.4/scala-logging_2.13-3.9.4.jar:/Users/paulo.bezerra/.m2/repository/io/dropwizard/metrics/metrics-core/4.2.19/metrics-core-4.2.19.jar:/Users/paulo.bezerra/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar:/Users/paulo.bezerra/.m2/repository/org/apache/kafka/kafka_2.13/3.4.1/kafka_2.13-3.4.1-test.jar:/Users/paulo.bezerra/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/paulo.bezerra/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/paulo.bezerra/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.3/junit-platform-launcher-1.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/junit-jupiter/1.18.3/junit-jupiter-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/kafka/1.18.3/kafka-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/postgresql/1.18.3/postgresql-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/jdbc/1.18.3/jdbc-1.18.3.jar:/Users/paulo.bezerra/.m2/repository/org/testcontainers/database-commons/1.18.3/database-commons-1.18.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/paulo.bezerra"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-01-18"/>
+    <property name="java.home" value="/Users/paulo.bezerra/.asdf/installs/java/openjdk-17.0.2"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/target/surefire/surefirebooter-20231031111923541_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.2+8-86"/>
+    <property name="user.name" value="paulo.bezerra"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.5.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/paulo.bezerra/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/nk/sm6hr90578bcsv4db0htswr00000gq/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="3"/>
+    <property name="java.version" value="17.0.2"/>
+    <property name="user.dir" value="/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="45707"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/paulo.bezerra/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.2+8-86"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testKafka" classname="com.picpay.weeklytestcontainers.kafka.KafkaTest" time="1.473">
+    <system-out><![CDATA[2023-10-31T11:19:45.025-03:00  INFO 45707 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.picpay.weeklytestcontainers.kafka.KafkaTest]: KafkaTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-31T11:19:45.034-03:00  INFO 45707 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.picpay.weeklytestcontainers.WeeklyTestcontainersApplication for test class com.picpay.weeklytestcontainers.kafka.KafkaTest
+2023-10-31T11:19:45.036-03:00  INFO 45707 --- [           main] tc.confluentinc/cp-kafka:7.3.3           : Creating container for image: confluentinc/cp-kafka:7.3.3
+2023-10-31T11:19:45.067-03:00  INFO 45707 --- [           main] tc.confluentinc/cp-kafka:7.3.3           : Container confluentinc/cp-kafka:7.3.3 is starting: d2deb798a390a017c947124e0ae2718f21fe9ca8a00d643797d5a3f836ad8b9b
+2023-10-31T11:19:45.167-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:45.167-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:45.167-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:45.482-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:45.482-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:45.482-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:46.365-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:46.365-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:46.365-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:46.506-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:46.506-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:46.506-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:47.381-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:47.381-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:47.381-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:47.423-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:47.423-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:47.423-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:48.396-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:48.397-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:48.397-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:48.536-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:48.536-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:48.536-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:49.210-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:49.210-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:49.210-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:49.601-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:49.602-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:49.602-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:50.226-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:50.226-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:50.226-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:50.567-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:50.567-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:50.567-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:50.787-03:00  INFO 45707 --- [ecutorLoop-4-15] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:49169
+2023-10-31T11:19:50.793-03:00  WARN 45707 --- [oEventLoop-6-14] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:49169]: Connection refused: localhost/127.0.0.1:49169
+2023-10-31T11:19:51.416-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:51.416-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:51.416-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:51.430-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:51.430-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:51.430-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:52.281-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:52.282-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:52.282-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:52.597-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:52.598-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:52.598-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:53.300-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:53.300-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:53.300-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:53.638-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:53.638-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:53.638-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:54.264-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:54.264-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:54.264-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:54.603-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:54.603-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:54.603-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:55.127-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:55.127-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:55.128-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:55.619-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:55.620-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:55.620-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:56.243-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:56.243-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:56.243-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:56.736-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:56.736-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:56.736-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:57.257-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:57.257-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:57.257-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:57.322-03:00  INFO 45707 --- [           main] tc.confluentinc/cp-kafka:7.3.3           : Container confluentinc/cp-kafka:7.3.3 started in PT12.285812S
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2023-10-31T11:19:57.339-03:00  WARN 45707 --- [           main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/paulo.bezerra/.m2/repository/org/json/json/20220320/json-20220320.jar!/org/json/JSONObject.class
+	jar:file:/Users/paulo.bezerra/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-10-31T11:19:57.339-03:00  INFO 45707 --- [           main] c.p.w.kafka.KafkaTest                    : broker address: PLAINTEXT://localhost:49170
+2023-10-31T11:19:57.340-03:00  INFO 45707 --- [           main] c.p.w.kafka.KafkaTest                    : Starting KafkaTest using Java 17.0.2 with PID 45707 (started by paulo.bezerra in /Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers)
+2023-10-31T11:19:57.340-03:00  INFO 45707 --- [           main] c.p.w.kafka.KafkaTest                    : No active profile set, falling back to 1 default profile: "default"
+2023-10-31T11:19:57.414-03:00  INFO 45707 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-10-31T11:19:57.414-03:00  INFO 45707 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-10-31T11:19:57.418-03:00  INFO 45707 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2023-10-31T11:19:57.420-03:00  INFO 45707 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-10-31T11:19:57.420-03:00  INFO 45707 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-10-31T11:19:57.423-03:00  INFO 45707 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-10-31T11:19:57.480-03:00  INFO 45707 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-10-31T11:19:57.576-03:00  INFO 45707 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.testcontainers.jdbc.ConnectionWrapper@1cb4cad0
+2023-10-31T11:19:57.576-03:00  INFO 45707 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-10-31T11:19:57.579-03:00  INFO 45707 --- [           main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:49168/test (PostgreSQL 15.4)
+2023-10-31T11:19:57.619-03:00  INFO 45707 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.016s)
+2023-10-31T11:19:57.690-03:00  INFO 45707 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1
+2023-10-31T11:19:57.693-03:00  INFO 45707 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-10-31T11:19:57.770-03:00  INFO 45707 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:49170]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-weekly-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = weekly
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-10-31T11:19:57.776-03:00  INFO 45707 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-10-31T11:19:57.776-03:00  INFO 45707 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-10-31T11:19:57.776-03:00  INFO 45707 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1698761997775
+2023-10-31T11:19:57.776-03:00  INFO 45707 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-weekly-3, groupId=weekly] Subscribed to topic(s): weekly
+2023-10-31T11:19:57.779-03:00  INFO 45707 --- [           main] c.p.w.kafka.KafkaTest                    : Started KafkaTest in 0.454 seconds (process running for 34.147)
+2023-10-31T11:19:57.796-03:00  INFO 45707 --- [           main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [PLAINTEXT://localhost:49170]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2023-10-31T11:19:57.802-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:57.802-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:57.802-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:57.804-03:00  INFO 45707 --- [           main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-10-31T11:19:57.817-03:00  INFO 45707 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-10-31T11:19:57.817-03:00  INFO 45707 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-10-31T11:19:57.817-03:00  INFO 45707 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1698761997817
+2023-10-31T11:19:57.948-03:00  WARN 45707 --- [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {weekly=UNKNOWN_TOPIC_OR_PARTITION}
+2023-10-31T11:19:57.949-03:00  INFO 45707 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: nNadjmZBRzORH3pwwtagVg
+2023-10-31T11:19:58.020-03:00  INFO 45707 --- [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2023-10-31T11:19:58.062-03:00  WARN 45707 --- [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error while fetching metadata with correlation id 4 : {weekly=UNKNOWN_TOPIC_OR_PARTITION}
+2023-10-31T11:19:58.066-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-3, groupId=weekly] Error while fetching metadata with correlation id 2 : {weekly=LEADER_NOT_AVAILABLE}
+2023-10-31T11:19:58.066-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-weekly-3, groupId=weekly] Cluster ID: nNadjmZBRzORH3pwwtagVg
+2023-10-31T11:19:58.177-03:00  WARN 45707 --- [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error while fetching metadata with correlation id 5 : {weekly=LEADER_NOT_AVAILABLE}
+2023-10-31T11:19:58.189-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-3, groupId=weekly] Error while fetching metadata with correlation id 4 : {weekly=LEADER_NOT_AVAILABLE}
+2023-10-31T11:19:58.223-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:58.223-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:58.224-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-2, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:58.299-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-3, groupId=weekly] Error while fetching metadata with correlation id 6 : {weekly=UNKNOWN_TOPIC_OR_PARTITION}
+2023-10-31T11:19:58.307-03:00  WARN 45707 --- [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error while fetching metadata with correlation id 6 : {weekly=LEADER_NOT_AVAILABLE}
+2023-10-31T11:19:58.418-03:00  WARN 45707 --- [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error while fetching metadata with correlation id 7 : {weekly=UNKNOWN_TOPIC_OR_PARTITION}
+2023-10-31T11:19:58.421-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-3, groupId=weekly] Error while fetching metadata with correlation id 8 : {weekly=LEADER_NOT_AVAILABLE}
+2023-10-31T11:19:58.531-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-3, groupId=weekly] Error while fetching metadata with correlation id 10 : {weekly=UNKNOWN_TOPIC_OR_PARTITION}
+2023-10-31T11:19:58.539-03:00  WARN 45707 --- [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error while fetching metadata with correlation id 8 : {weekly=LEADER_NOT_AVAILABLE}
+2023-10-31T11:19:58.642-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-3, groupId=weekly] Error while fetching metadata with correlation id 12 : {weekly=LEADER_NOT_AVAILABLE}
+2023-10-31T11:19:58.650-03:00  WARN 45707 --- [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error while fetching metadata with correlation id 9 : {weekly=LEADER_NOT_AVAILABLE}
+2023-10-31T11:19:58.768-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-weekly-3, groupId=weekly] Resetting the last seen epoch of partition weekly-0 to 0 since the associated topicId changed from null to 5bH6SbkLSHi7d9xJ53GB9g
+2023-10-31T11:19:58.791-03:00  INFO 45707 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition weekly-0 to 0 since the associated topicId changed from null to 5bH6SbkLSHi7d9xJ53GB9g
+2023-10-31T11:19:58.880-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Discovered group coordinator localhost:49170 (id: 2147483646 rack: null)
+2023-10-31T11:19:58.881-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] (Re-)joining group
+2023-10-31T11:19:58.940-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Request joining group due to: need to re-join with the given member-id: consumer-weekly-3-7c379bdf-5c18-4422-9fa1-b31005116545
+2023-10-31T11:19:58.941-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-10-31T11:19:58.941-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] (Re-)joining group
+2023-10-31T11:19:58.944-03:00  INFO 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Node -1 disconnected.
+2023-10-31T11:19:58.944-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-10-31T11:19:58.944-03:00  WARN 45707 --- [   weekly-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-weekly-1, groupId=weekly] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-10-31T11:19:58.998-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Successfully joined group with generation Generation{generationId=1, memberId='consumer-weekly-3-7c379bdf-5c18-4422-9fa1-b31005116545', protocol='range'}
+2023-10-31T11:19:59.002-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Finished assignment for group at generation 1: {consumer-weekly-3-7c379bdf-5c18-4422-9fa1-b31005116545=Assignment(partitions=[weekly-0])}
+2023-10-31T11:19:59.038-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Successfully synced group in generation Generation{generationId=1, memberId='consumer-weekly-3-7c379bdf-5c18-4422-9fa1-b31005116545', protocol='range'}
+2023-10-31T11:19:59.039-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Notifying assignor about the new Assignment(partitions=[weekly-0])
+2023-10-31T11:19:59.042-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Adding newly assigned partitions: weekly-0
+2023-10-31T11:19:59.062-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Found no committed offset for partition weekly-0
+2023-10-31T11:19:59.086-03:00  INFO 45707 --- [ecutorLoop-4-16] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:49169
+2023-10-31T11:19:59.090-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-weekly-3, groupId=weekly] Resetting offset for partition weekly-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:49170 (id: 1 rack: null)], epoch=0}}.
+2023-10-31T11:19:59.090-03:00  INFO 45707 --- [   weekly-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : weekly: partitions assigned: [weekly-0]
+2023-10-31T11:19:59.101-03:00  WARN 45707 --- [oEventLoop-6-15] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:49169]: Connection refused: localhost/127.0.0.1:49169
+2023-10-31T11:19:59.175-03:00  INFO 45707 --- [           main] c.p.w.kafka.KafkaConsumer                : stoping consumer: weekly
+2023-10-31T11:19:59.214-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Revoke previously assigned partitions weekly-0
+2023-10-31T11:19:59.214-03:00  INFO 45707 --- [   weekly-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : weekly: partitions revoked: [weekly-0]
+2023-10-31T11:19:59.215-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Member consumer-weekly-3-7c379bdf-5c18-4422-9fa1-b31005116545 sending LeaveGroup request to coordinator localhost:49170 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2023-10-31T11:19:59.216-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-10-31T11:19:59.216-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Request joining group due to: consumer pro-actively leaving the group
+2023-10-31T11:19:59.216-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-weekly-3, groupId=weekly] Unsubscribed all topics or patterns and assigned partitions
+2023-10-31T11:19:59.216-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-10-31T11:19:59.216-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-weekly-3, groupId=weekly] Request joining group due to: consumer pro-actively leaving the group
+2023-10-31T11:19:59.248-03:00  INFO 45707 --- [   weekly-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-10-31T11:19:59.248-03:00  INFO 45707 --- [   weekly-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-10-31T11:19:59.248-03:00  INFO 45707 --- [   weekly-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-10-31T11:19:59.251-03:00  INFO 45707 --- [   weekly-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-weekly-3 unregistered
+2023-10-31T11:19:59.251-03:00  INFO 45707 --- [   weekly-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : weekly: Consumer stopped
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,7 @@
+com/picpay/weeklytestcontainers/redis/RedisConfig.class
+com/picpay/weeklytestcontainers/entity/UserEntity.class
+com/picpay/weeklytestcontainers/kafka/KafkaConsumer.class
+com/picpay/weeklytestcontainers/kafka/KafkaProducer.class
+com/picpay/weeklytestcontainers/redis/RedisService.class
+com/picpay/weeklytestcontainers/WeeklyTestcontainersApplication.class
+com/picpay/weeklytestcontainers/repository/UserRepository.class

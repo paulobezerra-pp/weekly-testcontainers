@@ -1,0 +1,7 @@
+/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/src/main/java/com/picpay/weeklytestcontainers/redis/RedisService.java
+/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/src/main/java/com/picpay/weeklytestcontainers/kafka/KafkaProducer.java
+/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/src/main/java/com/picpay/weeklytestcontainers/repository/UserRepository.java
+/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/src/main/java/com/picpay/weeklytestcontainers/WeeklyTestcontainersApplication.java
+/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/src/main/java/com/picpay/weeklytestcontainers/kafka/KafkaConsumer.java
+/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/src/main/java/com/picpay/weeklytestcontainers/redis/RedisConfig.java
+/Users/paulo.bezerra/Workspaces/ws-weekly/weekly-testcontainers/src/main/java/com/picpay/weeklytestcontainers/entity/UserEntity.java

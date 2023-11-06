@@ -1,0 +1,3 @@
+com/picpay/weeklytestcontainers/redis/RedisTest.class
+com/picpay/weeklytestcontainers/kafka/KafkaTest.class
+com/picpay/weeklytestcontainers/repository/UserRepositoryTest.class
