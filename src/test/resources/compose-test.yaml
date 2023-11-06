@@ -4,3 +4,8 @@ services:
 
   redis:
     image: docker.io/redis
+
+  migrations:
+    image: 289208114389.dkr.ecr.us-east-1.amazonaws.com/picpay-dev/ms-baas-payments-migrations
+    enviroment:
+      
